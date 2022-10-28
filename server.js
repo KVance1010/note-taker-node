@@ -4,8 +4,8 @@ const filePath = require('path');
 let notesDB = require('./db/notesDB.json');
 
 const app = express();
-const PORT = 4200;
-
+const PORT =  process.env.PORT || 4200;
+process.env.PORT || 
 app.use(express.json());
 app.use(express.static('./public'));
 
